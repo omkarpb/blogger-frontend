@@ -1,0 +1,91 @@
+div.pageWrapper  {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* border: 1px solid #647ba1; */
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    background-color: #344361;
+    box-shadow: 2px 2px 8px #647ba1;
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}
+
+div.field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #b0cbe4;
+    
+}
+
+input {
+    padding: 6px;
+    border-color: #344361;
+    border-radius: 8px;
+    border-width: 0;
+    font-size: 16px;
+    box-shadow: 1px 1px 6px #647ba1;
+    color: #344361;
+    font-weight: 600;
+}
+
+div.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    height: 16px;
+}
+
+button {
+    width: 50%;
+    height: 32px;
+    border-radius: 8px;
+    border-width: 0px;
+    background-color: #b0cbe4;
+    font-size: 18px;
+    font-weight: 600;
+    color: #344361;
+    cursor: pointer;
+    margin: auto;
+    box-shadow: 2px 2px 8px #647ba1;
+}
+button:hover {
+    /* border: 1px solid white; */
+    box-shadow: 2px 2px 8px white;
+}
+button:disabled {
+    cursor: default;
+    background-color: #b0cbe4;
+    color: #647ba1;
+    box-shadow: 0px 0px;
+}
+
+.extra-action {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 8px;
+    color: #344361;
+    font-weight: 600;
+}
+
+button.dark {
+    background-color: #344361;
+    color: #b0cbe4;
+}
