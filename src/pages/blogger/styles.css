@@ -1,0 +1,16 @@
+.blogListItem {
+  background-color: #344361;
+  color: #b0cbe4;
+  width: 50%;
+  margin: auto;
+  box-shadow: 2px 2px 8px #647ba1;
+  cursor: pointer;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  transition: color 0.3s ease-in, box-shadow 0.3s ease-in;
+}
+
+.blogListItem:hover {
+  color: white;
+  box-shadow: 2px 2px 8px white;
+}

@@ -19,7 +19,6 @@ code {
   display: flex; ;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 16px 16px #344361;
 }
 .app {
   text-align: center;

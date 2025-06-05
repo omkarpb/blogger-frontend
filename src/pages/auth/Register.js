@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './styles.css';
 import { isEmpty } from 'lodash';
 import { useNavigate } from "react-router";
+import axios from 'axios';
 
 export const Register = () => {
     let navigate = useNavigate();
+    const onSubmitHandler = useCallback((values) => {
+        axios.post('http://localhost:3001/users/register', {
+            username: values.username,
+            email: values.email,
+            password: values.password,
+            firstname: values.firstname,
+            lastname: values.lastname
+        });
+    }, []);
     return (
         <div className="pageWrapper">
             <h2>Register now!</h2>
             <Formik
                 initialValues={{ username: '', email: '', password: '', firstname: '', lastname: '' }}
-                onSubmit={(values) => { console.log(values) }}
+                onSubmit={onSubmitHandler}
                 validationSchema={Yup.object({
                     username: Yup.string()
                         .max(15, 'Must be 15 characters or less')
